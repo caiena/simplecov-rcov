@@ -49,7 +49,7 @@ class SimpleCov::Formatter::RcovFormatter
     rcov_result = template.result( binding )
 
     File.open( output_filename, "w" ) do |file_result|
-     file_result.write rcov_result
+     file_result.write rcov_result.force_encoding('UTF-8')
     end
   end
 
